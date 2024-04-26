@@ -13,20 +13,20 @@ const ThemeSwitcher = () => {
   }, []);
 
   if (!mounted) {
-    return <Skeleton className="size-5 rounded-md shadow-md" />;
+    return <Skeleton className="size-6 rounded-sm" />;
   }
 
   if (resolvedTheme === "dark")
     return (
       <Sun
-        className="size-5 fill-amber-500 shadow-md"
+        className="size-5  cursor-pointer fill-amber-500 stroke-amber-500"
         onClick={() => setTheme("light")}
       />
     );
   if (resolvedTheme === "light")
     return (
       <Moon
-        className="size-5 fill-white shadow-md"
+        className="size-5  cursor-pointer fill-white"
         onClick={() => setTheme("dark")}
       />
     );

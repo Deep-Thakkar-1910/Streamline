@@ -6,7 +6,7 @@ import Providers from "./Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { default: "Taskify", template: "%s | Taskify" },
+  title: { default: "Streamline", template: "%s | Streamline" },
   description: "Collaborative task management for teams.",
   icons: "/logo.svg",
 };
