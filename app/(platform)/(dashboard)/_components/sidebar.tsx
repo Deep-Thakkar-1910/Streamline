@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { Accordion } from "@/components/ui/accordion";
+import { NavItem, Organization } from "./nav-item";
 
 //define SidebarProps
 interface SidebarProps {
@@ -62,11 +63,11 @@ export const Sidebar = ({storageKey='t-sidebar-state',}:SidebarProps) =>{//give 
     
     return(
         <>
-        <div className="font-medium text-xs items-center mb-1 border-r dark:bg-app-dark-navbar bg-white">
-            <div className="flex justify-between items-center">
-                <span className="">
-                Workspaces
-            </span>
+        <aside className="fixed top-16 left-0 font-medium text-xs items-center mb-1 border-r dark:bg-app-dark-navbar bg-white p-4 md:p-4 h-full">
+            <div className="flex justify-between items-center pb-3">
+                <span className=" font-semibold text-sm">
+                  Workspaces
+                </span>
             <Button
             asChild
             type="button"
@@ -84,12 +85,16 @@ export const Sidebar = ({storageKey='t-sidebar-state',}:SidebarProps) =>{//give 
                 className="space-y-2"
                 >
                     {userMemberships.data.map(({ organization})=>(
-                        <p key={organization.id}>
-                            {organization.id}
-                        </p>
+                       <NavItem
+                        key={organization.id}
+                        isActive={activeOrganization?.id === organization.id}
+                        isExpanded={expanded[organization.id]}
+                        organization={organization as Organization }
+                        onExpand={onExpand}
+                        />
                     ))}
                 </Accordion>
-        </div>
+        </aside>
         </>
     )
 }
