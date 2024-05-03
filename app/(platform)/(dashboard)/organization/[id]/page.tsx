@@ -2,11 +2,11 @@ import { Sidebar } from "../../_components/sidebar";
 
 const page = async () => {
   return (
-    <main className="pt-16 dark:bg-app-dark bg-slate-100 md:pt-24 size-full " >
+    <main className="size-full bg-slate-100 pt-16 dark:bg-app-dark md:pt-24 ">
       <div className="flex gap-x-7">
-        <div className="w-64 shrink-0 hidden md:block">
-          <Sidebar/>
-        </div>
+        <aside className="hidden w-64 shrink-0 md:block">
+          <Sidebar />
+        </aside>
       </div>
     </main>
   );

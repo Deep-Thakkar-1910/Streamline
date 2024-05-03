@@ -1,7 +1,7 @@
-import CustomSignIn from "../../_components/CustomSignIn";
+import { SignIn } from "@clerk/nextjs";
 
 const SignInPage = () => {
-  return <CustomSignIn />;
+  return <SignIn path="/sign-in" />;
 };
 
 export default SignInPage;
