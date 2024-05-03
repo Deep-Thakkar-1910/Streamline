@@ -1,7 +1,7 @@
-import CustomSignUp from "../../_components/CustomSignUp";
+import { SignUp } from "@clerk/nextjs";
 
 const SignUpPage = () => {
-  return <CustomSignUp />;
+  return <SignUp path="/sign-up" />;
 };
 
 export default SignUpPage;

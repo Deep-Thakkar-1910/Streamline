@@ -66,7 +66,7 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
 
   return (
     <>
-      <aside className="fixed left-0 top-16 mb-1 h-full w-56 items-center bg-white p-4 text-xs font-medium dark:bg-app-dark-navbar md:w-64 md:border-r md:p-4">
+      <div className="fixed left-0 top-16 mb-1 h-full w-56 items-center bg-white p-4 text-xs font-medium dark:bg-app-dark-navbar md:w-64 md:border-r md:p-4">
         <div className="flex items-center justify-between pb-3">
           <span className=" text-sm font-semibold">Workspaces</span>
           <Button
@@ -96,7 +96,7 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
             />
           ))}
         </Accordion>
-      </aside>
+      </div>
     </>
   );
 };

@@ -1,8 +1,13 @@
 import { OrganizationList } from "@clerk/nextjs";
-import CustomOrgList from "../../_components/CustomOrgList";
 
 const SelectOrganization = () => {
-  return <CustomOrgList />;
+  return (
+    <OrganizationList
+      hidePersonal
+      afterCreateOrganizationUrl="/organization/:id"
+      afterSelectOrganizationUrl="/organization/:id"
+    />
+  );
 };
 
 export default SelectOrganization;
